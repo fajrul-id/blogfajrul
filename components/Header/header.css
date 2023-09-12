@@ -1,0 +1,144 @@
+.searchBar {
+  position: relative;
+  transition: all 1s;
+  width: 50px;
+  height: 50px;
+  background: white;
+  box-sizing: border-box;
+  border-radius: 25px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.searchBarInput {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 42.5px;
+  line-height: 30px;
+  outline: 0;
+  border: 0;
+  display: none;
+  font-size: 1em;
+  border-radius: 20px;
+  padding: 0 20px;
+}
+
+.fa {
+  box-sizing: border-box;
+  padding: 10px;
+  width: 43.5px;
+  height: 43.5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  color: #07051a;
+  text-align: center;
+  font-size: 1.2em;
+  transition: all 1s;
+}
+
+/* .searchBar:hover,
+.searchBar:valid {
+  width: 220px;
+  cursor: pointer;
+} */
+
+.searchBar:hover input,
+.searchBar:valid input {
+  display: block;
+}
+
+.searchBar:hover .fa,
+.searchBar:valid .fa {
+  background: #07051a;
+  color: white;
+}
+
+.searchButton {
+  display: none;
+  position: absolute;
+  top: 70px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+
+.searchBar:valid a {
+  display: block;
+}
+
+.right-drawer {
+  position: fixed;
+  top: 0;
+  right: -320px;
+  width: 320px;
+  height: 100%;
+  color: #333;
+  background-color: #fff;
+  transition: right 0.3s;
+  z-index: 1000;
+}
+
+.right-drawer.open {
+  right: 0;
+}
+
+.toggle-button {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 24px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.toggle-button:focus {
+  outline: none;
+}
+
+/* Animasi ikon hamburger ke X saat drawer terbuka */
+.toggle-button svg {
+  transition: transform 0.3s;
+}
+
+.right-drawer.open .toggle-button svg {
+  transform: rotate(90deg);
+}
+
+.navbarMenu {
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+}
+
+.navbarMenu li {
+  margin: 0 10px;
+}
+
+.navbarMenu .Nav {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s;
+}
+
+.navbarMenu .Nav:hover {
+  color: #45a7ed;
+  transition: all;
+  transition-duration: 300ms;
+}
+
+.activeNav {
+  color: #0e86db;
+  font-weight: bold;
+}
